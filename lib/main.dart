@@ -1,13 +1,14 @@
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();  // waits for Flutter to be initilaised
+  WidgetsFlutterBinding
+      .ensureInitialized(); // waits for Flutter to be initilaised
   Flame.device.fullScreen();
   Flame.device.setLandscape();
   PixelAdventure game = PixelAdventure();
-  runApp(GameWidget(game: kDebugMode ? PixelAdventure() : game));
+  runApp(GameWidget(game: game));
 }
